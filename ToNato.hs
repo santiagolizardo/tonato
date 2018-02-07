@@ -1,6 +1,8 @@
 module ToNato where
 
 import Data.Char (isUpper, toLower, toUpper)
+import Data.List.Split (splitOn)
+import Data.List (intercalate)
 
 import qualified Data.Map as Map
 
@@ -41,6 +43,10 @@ translateChar c =
   where
   n = Map.findWithDefault [c] (toLower c) natoMap
 
+translateWord :: String -> String
+translateWord s = concatMap translateChar (intercalate "-" (tail (splitOn "" s)))
+
 toNato :: String -> String
-toNato = concatMap translateChar
+toNato [] = []
+toNato s = intercalate " " (map translateWord (splitOn " " s))
 
