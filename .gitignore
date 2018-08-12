@@ -1,6 +1,4 @@
-main
+tonato
+tonato-test
 *.o
 *.hi
-test
-Main
-Test

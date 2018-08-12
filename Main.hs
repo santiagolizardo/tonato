@@ -15,5 +15,5 @@ main = do
     exitFailure
 
   let string = head args
-  putStrLn (string ++ " --> " ++ (toNato string))
+  putStrLn (toNato string)
 

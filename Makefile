@@ -1,17 +1,17 @@
 
 main:
-	ghc --make Main.hs
+	ghc -o tonato --make Main.hs
 
 run: main
-	./Main
+	./tonato
 
 test:
-	ghc --make Test.hs
+	ghc -o tonato-test --make Test.hs
 
 runtest: test
-	./Test
+	./tonato-test
 
 clean:
-	rm -f {Main,Test}
+	rm -f {tonato,tonato-test}
 	rm -f {*.hi,*.o}
 
