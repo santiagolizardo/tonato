@@ -1,15 +1,18 @@
-# tonato (To NATO)
+tonato (To NATO)
+================
 
 Simple Haskell command line program that converts characters to their NATO representation.
 
-## Usage
+Usage
+-----
 
 ```bash
 $ ./tonato "Hello World"
 HOTEL-echo-lima-lima-oscar WHISKEY-oscar-romeo-lima-delta
 ```
 
-## Building
+Building
+--------
 
 To compile:
 
