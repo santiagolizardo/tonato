@@ -7,7 +7,7 @@ Usage
 -----
 
 ```bash
-./tonato "Hello World"
+cabal run -v0 tonato "Hello World"
 
 HOTEL-echo-lima-lima-oscar WHISKEY-oscar-romeo-lima-delta
 ```
@@ -18,18 +18,18 @@ Building
 Requirements:
 - Haskell compiler 8+
 - Cabal 3+
+- Haskell dependencies (managed by Cabal): split, QuickCheck
 
 To compile:
 
 ```bash
-make main
+make
 ```
 
 To run the test suite:
 
 ```bash
 make test
-./tonato-test
 
 +++ OK, passed 1 tests.
 +++ OK, passed 1 tests.

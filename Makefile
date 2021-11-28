@@ -1,18 +1,15 @@
+SHELL := /bin/bash
 
 all:
-	cabal install --lib --package-env . split
-	ghc -o tonato --make Main.hs
+	cabal build --only-dependencies --enable-tests --enable-benchmarks
+	cabal build --enable-tests --enable-benchmarks all
 
 run: all
 	./tonato
 
 test:
-	ghc -o tonato-test --make Test.hs
-
-runtest: test
-	./tonato-test
+	cabal test
 
 clean:
-	rm -f {tonato,tonato-test}
-	rm -f {*.hi,*.o}
+	cabal clean
 
