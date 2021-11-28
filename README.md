@@ -7,24 +7,30 @@ Usage
 -----
 
 ```bash
-$ ./tonato "Hello World"
+./tonato "Hello World"
+
 HOTEL-echo-lima-lima-oscar WHISKEY-oscar-romeo-lima-delta
 ```
 
 Building
 --------
 
+Requirements:
+- Haskell compiler 8+
+- Cabal 3+
+
 To compile:
 
 ```bash
-$ make main
+make main
 ```
 
 To run the test suite:
 
 ```bash
-$ make test
-$ ./tonato-test
+make test
+./tonato-test
+
 +++ OK, passed 1 tests.
 +++ OK, passed 1 tests.
 ```

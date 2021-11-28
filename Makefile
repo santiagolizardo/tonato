@@ -1,8 +1,9 @@
 
-main:
+all:
+	cabal install --lib --package-env . split
 	ghc -o tonato --make Main.hs
 
-run: main
+run: all
 	./tonato
 
 test:
