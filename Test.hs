@@ -1,5 +1,9 @@
-import Test.QuickCheck
-import ToNato
+{-# LANGUAGE Safe #-}
+
+import Prelude (Bool, IO(), (==))
+
+import Test.QuickCheck (quickCheck)
+import ToNato (translateChar)
 
 prop_TranslateChar :: Bool
 prop_TranslateChar = translateChar 'a' == "alpha"

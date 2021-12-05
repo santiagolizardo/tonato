@@ -1,4 +1,8 @@
-module ToNato where
+{-# LANGUAGE Safe #-}
+
+module ToNato (translateChar, toNato) where
+
+import Prelude (Char, String, map, tail, concatMap)
 
 import Data.Char (isUpper, toLower, toUpper)
 import Data.List.Split (splitOn)

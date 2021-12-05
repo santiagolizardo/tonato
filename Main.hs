@@ -1,5 +1,7 @@
+{-# LANGUAGE Safe #-}
 
-import ToNato
+import Prelude (IO(), putStrLn, head, (++), (/=), ($), length)
+import ToNato (toNato)
 
 import System.IO (hPutStrLn, stderr)
 import Control.Monad (when)
